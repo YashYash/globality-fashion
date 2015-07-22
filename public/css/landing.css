@@ -1,0 +1,382 @@
+/* Content Overlay */
+
+.content-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(1, 1, 1, 0.5);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: none;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.content-overlay.show-overlay {
+  display: block;
+}
+
+.content-overlay.fadein-overlay {
+  opacity: 1;
+}
+
+
+/* Form */
+.create-form {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  min-height: 400px;
+  max-height: 500px;
+  min-width: 280px;
+  max-width: 600px;
+  z-index: 2;
+  background: black;
+  background-clip: padding-box;
+  border: 2px solid rgba(34, 193, 238, 0.1);
+  text-align: center;
+  -webkit-transform: scale(0, 0);
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);  
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.create-form.show-form {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+.create-form > .cross-icon {
+  position: absolute;
+  top: -22px;
+  right: -19px;
+  border-radius: 100%;
+  color: #22c1ee;
+  background: black;
+  padding: 10px 12px 8px 12px;
+  border: 2px solid rgba(34, 193, 238, 0.2);
+  cursor: pointer;
+  text-shadow: 0 0 20px rgba(34, 193, 238, 1);
+  z-index: 1;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.create-form > .cross-icon:hover {
+  -webkit-transform: rotate(360deg);
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+  background: rgba(34, 193, 238, 1);
+  color: white;
+}
+
+.create-form > .form-banner {
+  height: 170px;
+  position: relative;
+  background-size: cover;
+}
+
+.create-form > .form-banner > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0.7);
+}
+
+.create-form > .form-banner > .card-heading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 90%;
+  margin: auto;
+  height: 95px;
+  left: 0;
+  right: 0;
+}
+
+.create-form > .form-banner > .card-heading > h1 {
+  color: white;
+  font-size: 28px;
+  font-weight: 100;
+}
+
+.create-form > .form-banner > .card-heading > p {
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.create-form > .form-banner > .card-heading > .upload-image {
+  color: white;
+  position: relative;
+  top: 0;
+  width: 180px;
+  margin: auto;
+  height: 30px;
+  padding-top: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(238, 238, 238, 0.1);
+  box-shadow: 0 0 10px black;
+  padding-left: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.create-form > .form-banner > .card-heading > .upload-image:hover {
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+  box-shadow: 0 0 20px black;
+}
+
+.create-form > .form-banner > .card-heading > .upload-image > span {
+  color: #22c1ee;
+  font-size: 20px;
+  position: absolute;
+  left: 36px;
+  top: 5px;
+}
+
+.create-form > .input-container {
+  width: 80%;
+  min-width: 250px;
+  max-width: 400px;
+  margin: auto auto 20px;
+  position: relative;
+}
+
+.create-form > .input-container.first {
+  margin-top: 40px;
+}
+
+.create-form > .input-container > p {
+  position: absolute;
+  top: -10px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #22c1ee;
+}
+
+.create-form > .input-container > div {
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  background: rgb(148, 46, 46);
+  height: 1px;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.create-form > .input-container > div.show-error {
+  width: 100%;
+}
+
+.create-form input {
+  width: 100%;
+  height: 35px;
+  border-bottom: 2px solid rgba(238, 238, 238, 0.1);
+  background: none;
+  color: white;
+}
+
+.create-form > button {
+  width: 200px;
+  margin-top: 10px;
+}
+
+
+/* BLUR CONTENT */
+
+.blur-content {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.blur-content.blur {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+}
+
+
+/* BANNER */
+
+.banner {
+  position: relative;
+  background: url('http://e.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2014/04/3028600-poster-p-fashion.jpg');
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+}
+
+.banner > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0.7);
+}
+
+.banner > .gradient {
+  background: -moz-linear-gradient(top, rgba(173, 173, 173, 1) 0%, rgba(170, 170, 170, 0) 1%, rgba(0, 0, 0, 0.66) 57%, rgba(0, 0, 0, 1) 86%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(173, 173, 173, 1)), color-stop(1%, rgba(170, 170, 170, 0)), color-stop(57%, rgba(0, 0, 0, 0.66)), color-stop(86%, rgba(0, 0, 0, 1)));
+  background: -webkit-linear-gradient(top, rgba(173, 173, 173, 1) 0%, rgba(170, 170, 170, 0) 1%, rgba(0, 0, 0, 0.66) 57%, rgba(0, 0, 0, 1) 86%);
+  background: -o-linear-gradient(top, rgba(173, 173, 173, 1) 0%, rgba(170, 170, 170, 0) 1%, rgba(0, 0, 0, 0.66) 57%, rgba(0, 0, 0, 1) 86%);
+  background: -ms-linear-gradient(top, rgba(173, 173, 173, 1) 0%, rgba(170, 170, 170, 0) 1%, rgba(0, 0, 0, 0.66) 57%, rgba(0, 0, 0, 1) 86%);
+  background: linear-gradient(to bottom, rgba(173, 173, 173, 1) 0%, rgba(170, 170, 170, 0) 1%, rgba(0, 0, 0, 0.66) 57%, rgba(0, 0, 0, 1) 86%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#adadad', endColorstr='#000000', GradientType=0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.banner > .heading {
+  width: 90%;
+  max-width: 400px;
+  min-width: 280px;
+  height: 140px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.banner > .heading > h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.banner > .heading > p {
+  color: white;
+  font-weight: 600;
+}
+
+.banner > .button-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 280px;
+  text-align: center;
+  color: white;
+}
+
+.banner > .button-text > button {
+  width: 200px;
+}
+
+.banner > .button-text > p:nth-child(2) {
+  margin: 0;
+  padding: 25px 0;
+  font-weight: 700;
+}
+
+.banner > .button-text > p:nth-child(3) {
+  color: white;
+  font-size: 40px;
+  position: relative;
+  top: 0;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.banner > .button-text > p:nth-child(3):hover {
+  color: #22c1ee;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  top: 10px;
+}
+
+
+/* Cards Container */
+
+.cards-container {
+  padding: 150px 20px;
+  text-align: center;
+  background: url('../images/design/modified-photoshop-roses-background.jpg');
+}
+
+@media(max-height: 555px) {
+  .create-form {
+    overflow: scroll;
+  }
+}
+
+@media(min-width:500px) {
+  .create-form {
+    min-height: 650px;
+  }
+  .create-form > .form-banner {
+    height: 300px;
+  }
+  .create-form > .form-banner > .card-heading > h1 {
+    font-size: 45px;
+  }
+  .create-form > .form-banner > .card-heading > p {
+    font-size: 14px
+  }
+  .create-form > .form-banner > .card-heading > .upload-image {
+    top: 25px;
+  }
+  .banner > .heading > h1 {
+    font-size: 70px;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="fashion-card" style="background: url('{{card.image}}')">
+	<span class="ion-ios-more-outline show-more"></span>
+	<span class="ion-share read-more" ng-click="goTo(card.url)"></span>
+	<div class="title-blurb">
+		<h1>{{card.title}}</h1>
+		<div class="sub-line"></div>
+		<p>{{card.blurb}}</p>
+	</div>
+	<p class="modified">{{card.modified | moment: 'MMM D, YYYY'}}</p>
+	<p class="author"><span class="ion-ios-person-outline"></span> {{card.author}}</p>
+	<div class="overlay"></div>
+</div>

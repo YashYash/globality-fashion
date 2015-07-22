@@ -1,0 +1,56 @@
+<ng-window></ng-window>
+<div class="content-overlay" ng-class="{'show-overlay': (showOverlay), 'fadein-overlay': (fadeInOverlay)}"></div>
+<form class="create-form" ng-class="{'show-form': (fadeInOverlay)}" ng-submit="createCard()">
+  <span class="icon-cross-1 cross-icon" ng-click="hideForm()"></span>
+  <div class="form-banner" style="background:url({{card.image}})">
+    <div class="overlay"></div>
+    <div class="card-heading">
+      <h1>SHARE YOUR STYLE</h1>
+      <div class="sub-line"></div>
+      <p>BRAVERY NEVER GOES OUT OF FASHION</p>
+      <div class="upload-image" ngf-drop ngf-select ng-model="files" ngf-drag-over-class="dragover" ngf-multiple="false" ngf-allow-dir="true" accept="image/*,application/pdf">
+        <span class="icon-camera-3"></span> UPLOAD IMAGE
+      </div>
+    </div>
+  </div>
+  <div class="input-container first">
+    <p ng-show="card.title.length > 0">Title</p>
+    <input placeholder="Title" ng-model="card.title">
+    <div class="card-error" ng-class="{'show-error': (cardError === 'title')}"></div>
+  </div>
+  <div class="input-container">
+    <p ng-show="card.blurb.length > 0">Blurb</p>
+    <input class="first" placeholder="Blurb" ng-model="card.blurb">
+    <div class="card-error" ng-class="{'show-error': (cardError === 'blurb')}"></div>
+  </div>
+  <div class="input-container">
+    <p ng-show="card.url.length > 0">Url</p>
+    <input class="first" placeholder="Url" ng-model="card.url">
+    <div class="card-error" ng-class="{'show-error': (cardError === 'url')}"></div>
+  </div>
+  <div class="input-container">
+    <p ng-show="card.author.length > 0">Author</p>
+    <input class="first" placeholder="Author" ng-model="card.author">
+    <div class="card-error" ng-class="{'show-error': (cardError === 'author')}"></div>
+  </div>
+  <button class="global-blue">CREATE</button>
+</form>
+<div class="blur-content" ng-class="{'blur': (fadeInOverlay)}">
+  <div class="banner">
+    <div class="overlay"></div>
+    <div class="gradient"></div>
+    <div class="heading">
+      <h1 ng-click="getCards()">FASHION</h1>
+      <div class="sub-line"></div>
+      <p>FASHION FADES, ONLY STYLE REMAINS</p>
+    </div>
+    <div class="button-text">
+      <button ng-click="showForm()" class="global-blue">SHARE YOUR STYLE</button>
+      <p>or</p>
+      <p class="ion-ios-arrow-thin-down"></p>
+    </div>
+  </div>
+  <div class="cards-container" id="cards-container">
+    <fashion-card card="card" ng-repeat="card in getData('LandingController').cards"></fashion-card>
+  </div>
+</div>

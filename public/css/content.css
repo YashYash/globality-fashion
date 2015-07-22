@@ -1,0 +1,11 @@
+/* Background */
+
+.content {
+	position: relative;
+	height: 100%;
+	overflow: scroll;
+	background:black;
+}
+.content::-webkit-scrollbar {
+	display: none;
+}
